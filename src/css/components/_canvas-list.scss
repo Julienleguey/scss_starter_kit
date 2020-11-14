@@ -1,0 +1,48 @@
+@import "../variables";
+
+.canvas-list-container {
+  display: flex;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  height: 175px;
+}
+
+.non-selected-canva {
+  min-height: 160px;
+  max-height: 160px;
+
+  &.iPhone55 {
+    min-width: 90px;
+    max-width: 90px;
+  }
+
+  &.iPhone65 {
+    min-width: 74px;
+    max-width: 74px;
+  }
+
+  &.iPad {
+    min-width: 120px;
+    max-width: 120px;
+  }
+
+  &.androidPhone {
+    min-width: 82px;
+    max-width: 82px;
+  }
+
+  &.androidTablet {
+    min-width: 102px;
+    max-width: 102px;
+  }
+}
+
+.select-mark {
+  padding-top: $u2;
+  border-bottom: 2px solid transparent;
+
+  &.canva-selected {
+    border-bottom-color: $dark;
+  }
+}

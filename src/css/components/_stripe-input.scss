@@ -1,0 +1,19 @@
+@import "../variables";
+
+.stripe-input {
+  border-style: solid;
+  border-width: $border-w-sm;
+  border-color: $border-color;
+
+  &.complete {
+    border-color: $success;
+  }
+
+  &.focus {
+    border-color: $primary;
+  }
+
+  &.invalid {
+    border-color: $danger;
+  }
+}

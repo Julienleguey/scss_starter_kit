@@ -1,0 +1,37 @@
+@import "../variables";
+
+.family-size {
+  &.selected {
+    background-color: $light;
+  }
+}
+
+.arrow {
+  transform: rotate(-90deg);
+
+  &.close {
+    transform: rotate(90deg);
+  }
+}
+
+.family-title {
+  color: $gray;
+  flex: 1;
+
+  &.checked {
+    cursor: pointer;
+    color: $dark;
+
+    &:hover,
+    &.selected {
+      text-decoration: underline;
+    }
+  }
+}
+
+.family-content {
+  &.close {
+    height: 0;
+    overflow: hidden;
+  }
+}

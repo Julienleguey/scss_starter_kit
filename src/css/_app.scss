@@ -1,0 +1,49 @@
+@import "./variables";
+
+body {
+  font-family: "HK Grotesk", sans-serif;
+  color: $dark;
+  font-size: 1rem;
+  font-weight: 300;
+  background-color: $lighter;
+  display: flex;
+}
+
+// ::selection {
+//   background: #f26c13;
+// }
+
+#root {
+  flex: 1;
+}
+
+#full-app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#content-container {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+// je ne savais pas où mettre ça, mais c'est pratique ces trucs
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.pe-none {
+  pointer-events: none;
+}
+
+.pe-auto {
+  pointer-events: auto;
+}

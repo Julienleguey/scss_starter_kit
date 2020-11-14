@@ -1,0 +1,55 @@
+@import "../variables";
+
+.onboarding-progress-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: $secondary;
+  transition: width 1s ease;
+}
+
+.onboarding-os {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: map-get($breakpoints, "sm")) {
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+
+.onboarding-button-os {
+  width: 100%;
+
+  @media (min-width: map-get($breakpoints, "sm")) {
+    width: 12rem;
+  }
+  margin: $u3;
+}
+
+.onboarding-device-list {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  max-width: 100%;
+
+  @media (min-width: map-get($breakpoints, "sm")) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: map-get($breakpoints, "md")) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: map-get($breakpoints, "lg")) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.onboarding-button-device {
+  width: 100%;
+}

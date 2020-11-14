@@ -1,0 +1,44 @@
+@import "../variables";
+
+#flash-container {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  width: 100%;
+  z-index: 5000;
+  height: calc(100% - 3rem);
+  background-color: transparent;
+  pointer-events: none;
+}
+
+#flash {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  flex-direction: row;
+  pointer-events: auto;
+  transform: translateY(-3rem);
+  transition: transform 0.3s;
+  box-shadow: 0 0 2px 0 rgba($black, 0.15);
+
+  &.active {
+    transform: translateY(0);
+  }
+
+  &.info {
+    background-color: $info;
+  }
+
+  &.success {
+    background-color: $success;
+  }
+
+  &.danger {
+    background-color: $danger;
+  }
+
+  &.warning {
+    background-color: $warning;
+  }
+}

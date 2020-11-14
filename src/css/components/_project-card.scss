@@ -1,0 +1,68 @@
+@import "../variables";
+
+.project-list {
+  flex: 1;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+
+  @media (min-width: map-get($breakpoints, "sm")) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: map-get($breakpoints, "lg")) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: map-get($breakpoints, "xl")) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.project-new-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: $u3 $u4;
+  background-color: $primary;
+
+  .plus-plain {
+    display: none;
+  }
+
+  &:hover .plus-empty {
+    display: none;
+  }
+
+  &:hover .plus-plain {
+    display: block;
+  }
+}
+
+.project-card-container {
+  position: relative;
+  height: 10rem;
+  display: flex;
+}
+
+.project-card-option-image {
+  .gear-plain {
+    display: none;
+  }
+
+  &:hover .gear-empty {
+    display: none;
+  }
+
+  &:hover .gear-plain {
+    display: block;
+  }
+}
+
+.project-card-dropdown-children {
+  top: calc(100% - 0.5rem);
+  right: 0.75rem;
+  min-width: max-content;
+}

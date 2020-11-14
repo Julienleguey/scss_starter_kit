@@ -1,0 +1,44 @@
+@import "../variables";
+
+canvas {
+  width: 100%;
+
+  &.iphone55 {
+    max-width: 348px;
+    max-height: 619px;
+  }
+
+  &.iphone65 {
+    max-width: 348px;
+    max-height: 753px;
+  }
+
+  &.ipad_portrait {
+    max-width: 348px;
+    max-height: 464px;
+  }
+
+  &.android6 {
+    max-width: 325px;
+    max-height: 635px;
+  }
+
+  &.nexus_7 {
+    max-width: 375px;
+    max-height: 587px;
+  }
+
+  &.nexus_9 {
+    max-width: 500px;
+    max-height: 725px;
+  }
+
+  &.nexus_10 {
+    max-width: 550px;
+    max-height: 785px;
+  }
+}
+
+.workshop-canva {
+  max-width: 350px;
+}

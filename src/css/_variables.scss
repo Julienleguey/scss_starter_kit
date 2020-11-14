@@ -1,0 +1,113 @@
+/******************
+COLORS
+******************/
+// just for reference start
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+
+$blue: #778beb !default;
+$indigo: #546de5 !default;
+$purple: #786fa6 !default;
+$pink: #f8a5c2 !default;
+$red: #e55039 !default;
+$orange: #e77f67 !default;
+$yellow: #f7d794 !default;
+$green: #b8e994 !default;
+$teal: #38ada9 !default;
+$cyan: #63cdda !default;
+// just for reference end
+
+// these are the colors used throughout the app
+$primary: $pink !default;
+$secondary: $purple !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$white: #fff !default;
+$lighter: $gray-100 !default;
+$light: $gray-300 !default;
+$gray: $gray-500;
+$dark: $gray-800 !default;
+$black: #000 !default;
+
+// colors list to run loop on
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "white": $white,
+  "lighter": $lighter,
+  "light": $light,
+  "gray": $gray,
+  "dark": $dark,
+  "black": $black,
+  "transparent": transparent,
+);
+
+$breakpoints: (
+  default: 0,
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+$u0: 0;
+$u1: 0.25rem;
+$u2: 0.5rem;
+$u3: 1rem;
+$u4: 1.5rem;
+$u5: 2rem;
+$u6: 3rem;
+$u7: 4rem;
+$u8: 5rem;
+$u9: 6rem;
+$u10: 7rem;
+
+$units: (
+  0: $u0,
+  1: $u1,
+  2: $u2,
+  3: $u3,
+  4: $u4,
+  5: $u5,
+  6: $u6,
+  7: $u7,
+  8: $u8,
+  9: $u9,
+  10: $u10,
+  auto: auto,
+);
+
+$font-lighter: 100;
+$font-light: 300;
+$font-normal: 400;
+$font-bold: 500;
+$font-bolder: 700;
+
+$border-w-sm: 1px; // default value for the border-width
+$border-w-md: 2px;
+$border-w-lg: 4px;
+
+$border-radius-none: 0;
+$border-radius-sm: 2px; // not used yet
+$border-radius-md: 0.25rem; //default value for the border radius
+$border-radius-lg: 0.5rem; // not used yet
+
+$round-border: 50%;
+
+$font-family-base: "HK Grotesk", "Segoe UI", Roboto, "Helvetica Neue", Arial,
+  "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol", "Noto Color Emoji" !default;
