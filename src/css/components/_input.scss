@@ -3,8 +3,8 @@
 input {
   height: 24px;
   border-style: solid;
-  border-width: $border-w-sm;
-  border-color: $border-color;
+  border-width: $border-width-sm;
+  border-color: $border-default-color;
   outline: none;
 
   &:focus {
@@ -15,8 +15,8 @@ input {
 textarea {
   height: 24px;
   border-style: solid;
-  border-width: $border-w-sm;
-  border-color: $border-color;
+  border-width: $border-width-sm;
+  border-color: $border-default-color;
   outline: none;
   max-width: 207px;
   resize: none;

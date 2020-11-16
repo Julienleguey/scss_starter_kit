@@ -2,44 +2,36 @@
 
 $breakpoints-list: (
   default: (
-    xs,
     sm,
     md,
     lg,
-    xl
-  ),
-  xs: (
-    xs,
-    sm,
-    md,
-    lg,
-    xl
+    xl,
   ),
   sm: (
     sm,
     md,
     lg,
-    xl
+    xl,
   ),
   md: (
     md,
     lg,
-    xl
+    xl,
   ),
   lg: (
     lg,
-    xl
+    xl,
   ),
   xl: (
-    xl
-  )
+    xl,
+  ),
 );
 
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px // xl: 1300px
+  xl: 1140px,
 );
 
 @mixin container-default {

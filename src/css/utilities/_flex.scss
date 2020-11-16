@@ -5,7 +5,7 @@ flex rows and columns directions
 ********************************/
 $directions: (
   "col": column,
-  "row": row
+  "row": row,
 );
 
 @include setClassesForBreakpoints(
@@ -24,7 +24,7 @@ $justifies: (
   "center": center,
   "sb": space-between,
   "sa": space-around,
-  "se": space-evenly
+  "se": space-evenly,
 );
 
 @include setClassesForBreakpoints(
@@ -41,7 +41,7 @@ $aligns: (
   "start": flex-start,
   "end": flex-end,
   "center": center,
-  "stretch": stretch
+  "stretch": stretch,
 );
 
 @include setClassesForBreakpoints($breakpoints, $aligns, "ai", "align-items");
@@ -52,10 +52,10 @@ flex wrap
 $wraps: (
   "wrap": wrap,
   "nowrap": nowrap,
-  "wrap-reverse": wrap-reverse
+  "wrap-reverse": wrap-reverse,
 );
 
-@include setClassesForBreakpoints($breakpoints, $wraps, "f-w", "flex-wrap");
+@include setClassesForBreakpoints($breakpoints, $wraps, "fw", "flex-wrap");
 
 /************************
 flex grow (not finished)

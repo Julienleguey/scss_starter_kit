@@ -1,9 +1,9 @@
 import React from "react";
-import withContext from "../Context/Context";
+// import withContext from "../Context/Context";
 import classnames from "classnames";
 
 const Button = ({
-  context,
+  // context,
   type,
   onClick,
   link,
@@ -14,7 +14,7 @@ const Button = ({
   btnClassName,
   textClassName,
   disabled,
-  children
+  children,
 }) => {
   return (
     <button
@@ -28,7 +28,7 @@ const Button = ({
         outlined && "outlined",
         btnClassName
       )}
-      disabled={context.loading || disabled}
+      // disabled={context.loading || disabled}
     >
       <p className={classnames(textClassName)}>{children}</p>
     </button>
@@ -42,7 +42,8 @@ Button.defaultProps = {
   fullWidth: false, // width 100% if true
   color: "primary",
   outlined: false,
-  textClassName: ""
+  textClassName: "",
 };
 
-export default withContext(Button);
+// export default withContext(Button);
+export default Button;

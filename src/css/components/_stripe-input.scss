@@ -2,8 +2,8 @@
 
 .stripe-input {
   border-style: solid;
-  border-width: $border-w-sm;
-  border-color: $border-color;
+  border-width: $border-width-sm;
+  border-color: $border-default-color;
 
   &.complete {
     border-color: $success;

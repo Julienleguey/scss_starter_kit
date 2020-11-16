@@ -1,57 +1,67 @@
 @import "../variables";
 
-// default color for the border
-$border-color: $gray;
+/***************************
+borders add, remove, width
+***************************/
 
-/****************
-borders defaults
-****************/
-.border {
-  border: solid $border-w-sm $border-color;
-  box-sizing: border-box;
+$sides: (
+  all: "",
+  top: "top",
+  right: "right",
+  bottom: "bottom",
+  left: "left",
+);
+
+$border-sizes: (
+  default: $border-width-sm,
+  sm: $border-width-sm,
+  md: $border-width-md,
+  lg: $border-width-lg,
+  0: 0,
+);
+
+@mixin border-class-creator(
+  $side-long-name,
+  $side-short-name,
+  $size-name,
+  $unit
+) {
+  @if $side-long-name == "all" {
+    @if $size-name == "default" {
+      .border {
+        border: solid $unit $border-default-color;
+        box-sizing: border-box;
+      }
+    } @else {
+      .border-#{$size-name} {
+        border: solid $unit $border-default-color;
+        box-sizing: border-box;
+      }
+    }
+  } @else {
+    @if $size-name == "default" {
+      .border-#{$side-short-name} {
+        border-#{$side-long-name}: solid $unit $border-default-color;
+        box-sizing: border-box;
+      }
+    } @else {
+      .border-#{$side-short-name}-#{$size-name} {
+        border-#{$side-long-name}: solid $unit $border-default-color;
+        box-sizing: border-box;
+      }
+    }
+  }
 }
 
-.border-top {
-  border-top: solid $border-w-sm $border-color;
-  box-sizing: border-box;
-}
-
-.border-bottom {
-  border-bottom: solid $border-w-sm $border-color;
-  box-sizing: border-box;
-}
-
-.border-right {
-  border-right: solid $border-w-sm $border-color;
-  box-sizing: border-box;
-}
-
-.border-left {
-  border-left: solid $border-w-sm $border-color;
-  box-sizing: border-box;
-}
-
-/****************
-remove borders
-****************/
-.border-0 {
-  border: 0;
-}
-
-.border-top-0 {
-  border-top: 0;
-}
-
-.border-bottom-0 {
-  border-bottom: 0;
-}
-
-.border-right-0 {
-  border-right: 0;
-}
-
-.border-left-0 {
-  border-left: 0;
+@each $side-long-name, $side-short-name in $sides {
+  @each $size-name, $unit in $border-sizes {
+    @include border-class-creator(
+      $side-long-name,
+      $side-short-name,
+      $size-name,
+      $unit
+    );
+  }
 }
 
 /****************
@@ -64,33 +74,68 @@ borders colors
 }
 
 /***************
-borders width
-***************/
-
-.border-sm {
-  border-width: $border-w-sm;
-}
-
-.border-md {
-  border-width: $border-w-md;
-}
-
-.border-lg {
-  border-width: $border-w-lg;
-}
-
-/***************
 borders radius
 ***************/
-.rounded {
-  border-radius: $border-radius-sm;
+$corners: (
+  all: "",
+  top-left: "tl",
+  top-right: "tr",
+  bottom-left: "bl",
+  bottom-right: "br",
+);
+
+$rounded-sizes: (
+  default: $border-radius-sm,
+  sm: $border-radius-sm,
+  md: $border-radius-md,
+  lg: $border-radius-lg,
+  0: 0,
+);
+
+@mixin rounded-class-creator(
+  $corner-long-name,
+  $corner-short-name,
+  $size-name,
+  $unit
+) {
+  @if $corner-long-name == "all" {
+    @if $size-name == "default" {
+      .rounded {
+        border-radius: $unit;
+      }
+    } @else {
+      .rounded-#{$size-name} {
+        border-radius: $unit;
+      }
+    }
+  } @else {
+    @if $size-name == "default" {
+      .rounded-#{$corner-short-name} {
+        border-#{$corner-long-name}-radius: $unit;
+      }
+    } @else {
+      .rounded-#{$corner-short-name}-#{$size-name} {
+        border-#{$corner-long-name}-radius: $unit;
+      }
+    }
+  }
 }
 
-.rounded-0 {
-  border-radius: 0;
+@each $corner-long-name, $corner-short-name in $corners {
+  @each $size-name, $unit in $rounded-sizes {
+    @include rounded-class-creator(
+      $corner-long-name,
+      $corner-short-name,
+      $size-name,
+      $unit
+    );
+  }
 }
 
-// todo pas au point ça
-.rounded-circle {
-  border-radius: $round-border;
+.circle {
+  border-radius: 50%;
+}
+
+.pill {
+  border-radius: 50rem;
 }

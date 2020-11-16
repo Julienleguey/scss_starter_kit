@@ -2,7 +2,7 @@
 
 .option-container {
   display: flex;
-  border: solid $border-w-sm $dark;
+  border: solid $border-width-sm $dark;
   box-sizing: border-box;
   border-right: 0;
 }
@@ -12,7 +12,7 @@
   cursor: pointer;
   display: flex;
   justify-content: center;
-  border-right: solid $border-w-sm $dark;
+  border-right: solid $border-width-sm $dark;
   box-sizing: border-box;
   background-color: $light;
   padding: $u1;

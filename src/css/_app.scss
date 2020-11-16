@@ -4,9 +4,23 @@ body {
   font-family: "HK Grotesk", sans-serif;
   color: $dark;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: $font-light;
   background-color: $lighter;
   display: flex;
+}
+
+th,
+caption {
+  font-weight: $font-bold;
+}
+
+td {
+  font-weight: $font-light;
+}
+
+th,
+td {
+  padding: $u2;
 }
 
 // ::selection {
@@ -15,6 +29,7 @@ body {
 
 #root {
   flex: 1;
+  max-width: 100%;
 }
 
 #full-app-container {

@@ -1,8 +1,7 @@
-import react from "react";
 import Dropdown from "./Shared/Dropdown";
 import Link from "./Shared/Link";
 
-const Header = ({}) => {
+const Header = () => {
   return (
     <div className="w-100 border-bottom d-flex jc-sb px-4">
       <Link to="/" className="text-center py-3">
@@ -15,11 +14,11 @@ const Header = ({}) => {
         classNameChildren="profile-dropdown-children font-weight-bolder"
         title={<p>Menu</p>}
       >
-        <Link className="py-1" to="/global">
-          global
+        <Link className="py-1" to="/basics">
+          Basics
         </Link>
         <Link className="py-1" to="/utilities">
-          utilities
+          Utilities
         </Link>
         <Link className="py-1" to="/components">
           components

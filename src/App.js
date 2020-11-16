@@ -7,6 +7,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import Basics from "./pages/Basics";
+import Utilities from "./pages/Utilities";
 
 class App extends Component {
   render() {
@@ -17,6 +19,8 @@ class App extends Component {
           <div id="content-container">
             <Switch>
               <Route exact path="/" render={() => <Home />} />
+              <Route exact path="/basics" render={() => <Basics />} />
+              <Route exact path="/utilities" render={() => <Utilities />} />
               <Route path="/" render={() => <NotFound />} />
             </Switch>
           </div>

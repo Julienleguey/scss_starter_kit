@@ -1,42 +1,42 @@
 /******************
 COLORS
 ******************/
-// just for reference start
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-
-$blue: #778beb !default;
-$indigo: #546de5 !default;
-$purple: #786fa6 !default;
-$pink: #f8a5c2 !default;
-$red: #e55039 !default;
-$orange: #e77f67 !default;
-$yellow: #f7d794 !default;
-$green: #b8e994 !default;
-$teal: #38ada9 !default;
-$cyan: #63cdda !default;
-// just for reference end
+// // just for reference start
+// $gray-100: #f8f9fa !default;
+// $gray-200: #e9ecef !default;
+// $gray-300: #dee2e6 !default;
+// $gray-400: #ced4da !default;
+// $gray-500: #adb5bd !default;
+// $gray-600: #6c757d !default;
+// $gray-700: #495057 !default;
+// $gray-800: #343a40 !default;
+// $gray-900: #212529 !default;
+//
+// $blue: #778beb !default;
+// $indigo: #546de5 !default;
+// $purple: #786fa6 !default;
+// $pink:  !default;
+// $red: #e55039 !default;
+// $orange: #e77f67 !default;
+// $yellow: #f7d794 !default;
+// $green: #b8e994 !default;
+// $teal: #38ada9 !default;
+// $cyan: #63cdda !default;
+// // just for reference end
 
 // these are the colors used throughout the app
-$primary: $pink !default;
-$secondary: $purple !default;
-$success: $green !default;
-$info: $cyan !default;
-$warning: $yellow !default;
-$danger: $red !default;
-$white: #fff !default;
-$lighter: $gray-100 !default;
-$light: $gray-300 !default;
-$gray: $gray-500;
-$dark: $gray-800 !default;
-$black: #000 !default;
+$primary: #f8a5c2;
+$secondary: #786fa6;
+$success: #b8e994;
+$info: #63cdda;
+$warning: #f7d794;
+$danger: #e55039;
+$white: #fff;
+$lighter: #f8f9fa;
+$light: #dee2e6;
+$gray: #adb5bd;
+$dark: #343a40;
+$black: #000;
 
 // colors list to run loop on
 $colors: (
@@ -97,16 +97,18 @@ $font-normal: 400;
 $font-bold: 500;
 $font-bolder: 700;
 
-$border-w-sm: 1px; // default value for the border-width
-$border-w-md: 2px;
-$border-w-lg: 4px;
+/***************************
+Borders
+***************************/
+$border-default-color: $gray;
 
-$border-radius-none: 0;
-$border-radius-sm: 2px; // not used yet
-$border-radius-md: 0.25rem; //default value for the border radius
-$border-radius-lg: 0.5rem; // not used yet
+$border-width-sm: 1px;
+$border-width-md: 2px;
+$border-width-lg: 4px;
 
-$round-border: 50%;
+$border-radius-sm: 0.25rem;
+$border-radius-md: 0.5rem;
+$border-radius-lg: 1rem;
 
 $font-family-base: "HK Grotesk", "Segoe UI", Roboto, "Helvetica Neue", Arial,
   "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
