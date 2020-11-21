@@ -1,6 +1,4 @@
-import react from "react";
-
-const Home = ({}) => {
+const Home = () => {
   return (
     <div>
       <h6>Home</h6>
@@ -12,7 +10,7 @@ const Home = ({}) => {
       <div className="container-md bg-primary h-10 mb-3">md</div>
       <div className="container-lg bg-primary h-10 mb-3">lg</div>
       <div className="container-xl bg-primary h-10 mb-3">xl</div>
-      <div className="tiny-container bg-primary h-10 mb-3">xl</div>
+      <div className="tiny-container bg-primary h-10 mb-3">.tiny-container</div>
     </div>
   );
 };

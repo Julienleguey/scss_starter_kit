@@ -6,6 +6,8 @@ flex rows and columns directions
 $directions: (
   "col": column,
   "row": row,
+  "colr": column-reverse,
+  "rowr": row-reverse,
 );
 
 @include setClassesForBreakpoints(
@@ -14,6 +16,17 @@ $directions: (
   "f",
   "flex-direction"
 );
+
+/********************
+flex wrap
+********************/
+$wraps: (
+  "wrap": wrap,
+  "nowrap": nowrap,
+  "wrap-reverse": wrap-reverse,
+);
+
+@include setClassesForBreakpoints($breakpoints, $wraps, "fw", "flex-wrap");
 
 /********************
 justify content
@@ -37,29 +50,57 @@ $justifies: (
 /********************
 align items
 ********************/
-$aligns: (
+$align-items: (
   "start": flex-start,
   "end": flex-end,
   "center": center,
   "stretch": stretch,
+  "baseline": baseline,
 );
 
-@include setClassesForBreakpoints($breakpoints, $aligns, "ai", "align-items");
-
-/********************
-flex wrap
-********************/
-$wraps: (
-  "wrap": wrap,
-  "nowrap": nowrap,
-  "wrap-reverse": wrap-reverse,
+@include setClassesForBreakpoints(
+  $breakpoints,
+  $align-items,
+  "ai",
+  "align-items"
 );
-
-@include setClassesForBreakpoints($breakpoints, $wraps, "fw", "flex-wrap");
 
 /************************
-flex grow (not finished)
+flex order
 ************************/
-.flex-1 {
-  flex: 1;
+$numbers: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+@each $number in $numbers {
+  .order-#{$number} {
+    order: $number;
+  }
 }
+
+/************************
+flex grow
+************************/
+@each $number in $numbers {
+  .flex-#{$number} {
+    flex: $number;
+  }
+}
+
+/************************
+flex align-self
+************************/
+
+$align-self: (
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "stretch": stretch,
+  "baseline": baseline,
+  "auto": auto,
+);
+
+@include setClassesForBreakpoints(
+  $breakpoints,
+  $align-items,
+  "as",
+  "align-self"
+);

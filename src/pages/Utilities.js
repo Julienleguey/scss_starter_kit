@@ -5,6 +5,7 @@ import Colors from "../components/Utilities/Colors";
 import Containers from "../components/Utilities/Containers";
 import Display from "../components/Utilities/Display";
 import Flex from "../components/Utilities/Flex";
+import Grid from "../components/Utilities/Grid";
 import Overflow from "../components/Utilities/Overflow";
 import Position from "../components/Utilities/Position";
 import Shadow from "../components/Utilities/Shadow";
@@ -19,6 +20,7 @@ const Utilities = ({}) => {
     Containers,
     Display,
     Flex,
+    Grid,
     Overflow,
     Position,
     Shadow,

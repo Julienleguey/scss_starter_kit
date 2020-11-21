@@ -14,6 +14,15 @@ caption {
   font-weight: $font-bold;
 }
 
+tr {
+  border: solid $border-width-sm $border-default-color;
+  border-bottom: none;
+
+  &:last-child {
+    border-bottom: solid $border-width-sm $border-default-color;
+  }
+}
+
 td {
   font-weight: $font-light;
 }
@@ -21,6 +30,11 @@ td {
 th,
 td {
   padding: $u2;
+  border-right: solid $border-width-sm $border-default-color;
+
+  &:last-child {
+    border-right: none;
+  }
 }
 
 // ::selection {
